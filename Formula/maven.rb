@@ -15,10 +15,6 @@ class Maven < Formula
     sha256 cellar: :any_skip_relocation, arm64_ventura: "a7b6ec1d8230c404f0e58757a8de9481cf0cd57836599d55297ffdb3f81fccb2"
   end
 
-  depends_on "openjdk"
-
-  conflicts_with "mvnvm", because: "also installs a 'mvn' executable"
-
   def install
     # Remove windows files
     rm_f Dir["bin/*.cmd"]
